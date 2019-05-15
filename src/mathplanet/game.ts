@@ -6,17 +6,20 @@ const config: GameConfig = {
   title: "MathPlanet",
   url: "https://github.com/Rupank/MathPlanetPhaser.git",
   version: "1.0",
-  width: window.innerWidth,
-  height: window.innerHeight,
+  scale: {
+    parent: 'game',
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: 1280,
+    height: 720
+  },
   // zoom: 0.6,
   type: Phaser.AUTO,
-  parent: "game",
   scene: [BootScene, MenuScene],
   // input: {
   //   keyboard: true
   // },
-  backgroundColor: "#000000",
-  render: { pixelArt: false, antialias: true }
+  backgroundColor: "#000000"
 };
 
 export class Game extends Phaser.Game {
