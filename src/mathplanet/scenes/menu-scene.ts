@@ -19,6 +19,7 @@ export class MenuScene extends Phaser.Scene {
   }
 
   create(): void {
+    this.swipe();
     this.themes.push(this.add.sprite(0, 0, 'planet1'));
     this.themes.push(this.add.sprite(0, 0, 'planet2'));
     this.themes.push(this.add.sprite(0, 0, 'planet3'));
@@ -32,8 +33,8 @@ export class MenuScene extends Phaser.Scene {
       item.setOrigin(0.5, 0.5);
       item.x = this.sys.canvas.width + 250;
       item.y = this.sys.canvas.height / 2;
-      item.setInteractive();
-      item.on("pointerdown", this.clickListener);
+      // item.setInteractive();
+      // item.on("pointerdown", this.clickListener);
     }, this)
 
     this.setToPosition();
@@ -66,6 +67,39 @@ export class MenuScene extends Phaser.Scene {
       this.themes[this.prime - 1].x = this.sys.canvas.width / 2 - this.themes[0].displayWidth;
       this.themes[this.prime - 1].setScale(0.5, 0.5);
     }
+  }
+
+  private swipe(): void {
+    let downX, upX, downY, upY, threshold = 50;
+    let flag = false;
+    this.input.on('pointerdown', (pointer) => {
+      flag = true;
+      downX = pointer.x;
+      downY = pointer.y;
+    });
+
+    this.input.on('pointerup', (pointer) => {
+      if (flag) {
+        flag = false;
+        upX = pointer.x;
+        upY = pointer.y;
+        if (upX < downX - threshold) {
+          if (this.prime < this.themes.length - 1) {
+            this.nextTheme();
+          }
+          console.log("swipeleft");
+        } else if (upX > downX + threshold) {
+          if (this.prime > 0) {
+            this.previousTheme();
+          }
+          console.log("swiperight");
+        } else if (upY < downY - threshold) {
+          console.log("swipeup");
+        } else if (upY > downY + threshold) {
+          console.log("swipedown");
+        }
+      }
+    });
   }
 
   //move to next theme
