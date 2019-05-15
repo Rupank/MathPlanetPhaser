@@ -1,6 +1,6 @@
 {
   "name": "mathplanet",
-  "version": "1.2.5",
+  "version": "1.1.0",
   "description": "MathPlanet Wrapper Using Phaser 3 in TypeScript",
   "keywords": [
     "Phaser",

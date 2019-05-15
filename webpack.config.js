@@ -5,8 +5,8 @@ var phaser = path.join(pathToPhaser, 'dist/phaser.js');
 module.exports = {
   entry: './src/mathplanet/game.ts',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'mathplanet.js',
   },
   module: {
     rules: [{
@@ -22,10 +22,10 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, './'),
-    publicPath: '/dist/',
+    publicPath: '/build/',
     host: '127.0.0.1',
     port: 8080,
-    open: true
+    open: false
   },
   resolve: {
     extensions: ['.ts', '.js'],
