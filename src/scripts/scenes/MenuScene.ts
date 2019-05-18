@@ -19,7 +19,6 @@ export default class MenuScene extends Phaser.Scene {
     }
 
     create(): void {
-        debugger
         this.swipe();
         this.themes.push(this.add.sprite(0, 0, 'planet1'));
         this.themes.push(this.add.sprite(0, 0, 'planet2'));

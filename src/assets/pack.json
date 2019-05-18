@@ -3,52 +3,52 @@
     "files": [{
         "type": "image",
         "key": "bg",
-        "url": "./src/assets/sprites/bg.png"
+        "url": "./assets/sprites/bg.png"
       },
       {
         "type": "image",
         "key": "starBottom",
-        "url": "./src/assets/sprites/starBottom.png"
+        "url": "./assets/sprites/starBottom.png"
       },
       {
         "type": "image",
         "key": "starTop",
-        "url": "./src/assets/sprites/starTop.png"
+        "url": "./assets/sprites/starTop.png"
       },
       {
         "type": "image",
         "key": "planet1",
-        "url": "./src/assets/sprites/planet1.png"
+        "url": "./assets/sprites/planet1.png"
       },
       {
         "type": "image",
         "key": "planet2",
-        "url": "./src/assets/sprites/planet2.png"
+        "url": "./assets/sprites/planet2.png"
       },
       {
         "type": "image",
         "key": "planet3",
-        "url": "./src/assets/sprites/planet3.png"
+        "url": "./assets/sprites/planet3.png"
       },
       {
         "type": "image",
         "key": "planet4",
-        "url": "./src/assets/sprites/planet4.png"
+        "url": "./assets/sprites/planet4.png"
       },
       {
         "type": "image",
         "key": "planet5",
-        "url": "./src/assets/sprites/planet5.png"
+        "url": "./assets/sprites/planet5.png"
       },
       {
         "type": "image",
         "key": "planet6",
-        "url": "./src/assets/sprites/planet6.png"
+        "url": "./assets/sprites/planet6.png"
       },
       {
         "type": "image",
         "key": "planet7",
-        "url": "./src/assets/sprites/planet7.png"
+        "url": "./assets/sprites/planet7.png"
       }
     ]
   }
