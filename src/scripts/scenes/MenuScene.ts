@@ -73,6 +73,11 @@ export default class MenuScene extends Phaser.Scene {
         let downX, upX, downY, upY, threshold = 50;
         let flag = false;
         this.input.on('pointerdown', (pointer) => {
+            if (this.scale.isFullscreen) {
+                // this.scale.stopFullscreen();
+            } else {
+                this.scale.startFullscreen();
+            }
             flag = true;
             downX = pointer.x;
             downY = pointer.y;
