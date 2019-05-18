@@ -45,6 +45,7 @@ export default class MenuScene extends Phaser.Scene {
         this.xright = this.sys.canvas.width / 2 + this.themes[0].displayWidth;
     }
 
+
     clickListener(el, b, c, d): void {
         var clickedPos = (this.scene as any).themes.indexOf(this);
         if (clickedPos > (this.scene as any).prime) {
@@ -71,25 +72,33 @@ export default class MenuScene extends Phaser.Scene {
         }
     }
 
+
     private swipe(): void {
         let downX, upX, downY, upY, threshold = 50;
         let flag = false;
         this.input.on('pointerdown', (pointer) => {
-            // if (this.scale.isFullscreen) {
-            //     // this.scale.stopFullscreen();
-            // } else {
-            if (!this.isFullScreen) {
-                this.isFullScreen = true;
-                this.scale.startFullscreen();
-            }
-            // }
             flag = true;
             downX = pointer.x;
             downY = pointer.y;
         });
 
+
+        this.scale.onFullScreenChange = () => {
+            if (!this.scale.isFullscreen) {
+                // this.isFullScreen = false;
+            }
+        }
+
         this.input.on('pointerup', (pointer) => {
             if (flag) {
+                // if (this.scale.isFullscreen) {
+                //     // this.scale.stopFullscreen();
+                // } else {
+                if (!this.isFullScreen) {
+                    this.isFullScreen = true;
+                    this.scale.startFullscreen();
+                }
+                // }
                 flag = false;
                 upX = pointer.x;
                 upY = pointer.y;
