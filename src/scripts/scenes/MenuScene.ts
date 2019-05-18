@@ -1,3 +1,4 @@
+import Background from "../objects/background";
 
 export default class MenuScene extends Phaser.Scene {
     private themes: Phaser.GameObjects.Sprite[] = [];
@@ -8,6 +9,7 @@ export default class MenuScene extends Phaser.Scene {
     private animationSpeed;
     private totalThemes = 0;
     private isFullScreen: boolean;
+    private bg: Background;
     constructor() {
         super({
             key: "MenuScene"
@@ -21,6 +23,7 @@ export default class MenuScene extends Phaser.Scene {
     }
 
     create(): void {
+        this.addBg();
         this.swipe();
         this.themes.push(this.add.sprite(0, 0, 'planet1'));
         this.themes.push(this.add.sprite(0, 0, 'planet2'));
@@ -43,6 +46,9 @@ export default class MenuScene extends Phaser.Scene {
         this.xleft = this.sys.canvas.width / 2 - this.themes[0].displayWidth;
         this.xprime = this.sys.canvas.width / 2;
         this.xright = this.sys.canvas.width / 2 + this.themes[0].displayWidth;
+    }
+    addBg(): void {
+        this.bg = new Background(this);
     }
 
 
@@ -263,5 +269,6 @@ export default class MenuScene extends Phaser.Scene {
 
 
     update(): void {
+        this.bg.update();
     }
 }
