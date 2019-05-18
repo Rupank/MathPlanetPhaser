@@ -7,6 +7,7 @@ export default class MenuScene extends Phaser.Scene {
     private xright = 0;
     private animationSpeed;
     private totalThemes = 0;
+    private isFullScreen: boolean;
     constructor() {
         super({
             key: "MenuScene"
@@ -16,6 +17,7 @@ export default class MenuScene extends Phaser.Scene {
     init(): void {
         this.prime = 0;
         this.animationSpeed = 300;
+        this.isFullScreen = false;
     }
 
     create(): void {
@@ -73,11 +75,14 @@ export default class MenuScene extends Phaser.Scene {
         let downX, upX, downY, upY, threshold = 50;
         let flag = false;
         this.input.on('pointerdown', (pointer) => {
-            if (this.scale.isFullscreen) {
-                // this.scale.stopFullscreen();
-            } else {
+            // if (this.scale.isFullscreen) {
+            //     // this.scale.stopFullscreen();
+            // } else {
+            if (!this.isFullScreen) {
+                this.isFullScreen = true;
                 this.scale.startFullscreen();
             }
+            // }
             flag = true;
             downX = pointer.x;
             downY = pointer.y;
