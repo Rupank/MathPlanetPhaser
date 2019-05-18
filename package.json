@@ -1,48 +1,48 @@
 {
   "name": "mathplanet",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "MathPlanet Wrapper Using Phaser 3 in TypeScript",
+  "homepage": "https://github.com/Rupank/MathPlanetPhaser#readme",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack/webpack.dev.js",
+    "build": "webpack --config webpack/webpack.prod.js"
+  },
   "keywords": [
     "Phaser",
     "Phaser 3",
     "Phaser3",
-    "Html5-game",
-    "Phaser-boilerplate",
+    "html5 game",
     "TypeScript",
-    "Webpack",
-    "Tutorials",
-    "Phaser-tutorial",
-    "Game Examples",
-    "Phaser-game",
-    "Phaser-framework",
-    "Phaser3-example"
+    "webpack",
+    "starter"
   ],
-  "devDependencies": {
-    "expose-loader": "0.7.5",
-    "ts-loader": "6.0.0",
-    "typescript": "3.4.5",
-    "webpack": "4.31.0",
-    "webpack-cli": "3.3.2",
-    "webpack-dev-server": "3.3.1"
-  },
-  "dependencies": {
-    "phaser": "3.17.0"
-  },
-  "scripts": {
-    "dev": "webpack --mode development && webpack-dev-server --mode development",
-    "build": "webpack --mode production && webpack-dev-server --mode production"
+  "author": {
+    "name": "Rupank",
+    "email": "rupankbansal@gmail.com"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rupank/MathPlanetPhaser.git"
   },
-  "author": {
-    "name": "Rupank",
-    "email": "rupankbansal@gmail.com"
+  "engines": {
+    "node": ">=8.0.0"
   },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rupank/MathPlanetPhaser/issues"
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^5.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1",
+    "webpack-obfuscator": "^0.18.0",
+    "workbox-webpack-plugin": "^4.0.0"
   },
-  "homepage": "https://github.com/Rupank/MathPlanetPhaser#readme"
+  "dependencies": {
+    "phaser": "^3.16.2"
+  }
 }

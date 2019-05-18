@@ -1,116 +1,196 @@
+<h1 align="center">
+  <br>
+  <a href="https://github.com/yandeu/phaser-project-template#readme"><img src="readme/header.png" alt="header" width="600"></a>
+  <br>
+  Phaser 3 TypeScript Starter Template
+  <br>
+</h1>
+
+<h4 align="center">
+A starter template for <a href="https://phaser.io/" target="_blank" >Phaser 3</a> with <a href="https://www.typescriptlang.org/index.html" target="_blank" >TypeScript</a> and <a href="https://webpack.js.org/" target="_blank" >webpack</a> for building excellent html5-games that work great in the browser and on mobile devices.</h4>
+
 <p align="center">
-  <img width=100% src="https://github.com/digitsensitive/phaser3-typescript/blob/master/assets/github/phaser3-typescript.png">
-  Phaser 3 Game Examples written in TypeScript.
+  <a href="https://david-dm.org/yandeu/phaser-project-template" title="dependencies status">
+    <img src="https://david-dm.org/yandeu/phaser-project-template/status.svg?style=flat-square"/>
+  </a>
+  <a href="https://opensource.org/licenses/MIT" title="License: MIT" >
+    <img src="https://img.shields.io/badge/License-MIT-greenbright.svg?style=flat-square">
+  </a>
+  <img src="https://img.shields.io/github/package-json/v/yandeu/phaser-project-template.svg?style=flat-square" alt="GitHub package.json version">
+  <img src="https://img.shields.io/github/last-commit/yandeu/phaser-project-template.svg?style=flat-square" alt="GitHub last commit">
 </p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![dependencies status badge](https://david-dm.org/digitsensitive/phaser3-typescript/status.svg)](https://david-dm.org/digitsensitive/phaser3-typescript)
-[![development dependencies status badge](https://david-dm.org/digitsensitive/phaser3-typescript/dev-status.svg)](https://david-dm.org/digitsensitive/phaser3-typescript/?type=dev)
-[![GitHub issues](https://img.shields.io/github/issues/digitsensitive/phaser3-typescript.svg)](https://github.com/digitsensitive/phaser3-typescript/issues)
-[![GitHub stars](https://img.shields.io/github/stars/digitsensitive/phaser3-typescript.svg)](https://github.com/digitsensitive/phaser3-typescript/stargazers)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
-[![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![GitHub license](https://img.shields.io/github/license/digitsensitive/phaser3-typescript.svg)](https://github.com/digitsensitive/phaser3-typescript)
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#preview">Preview</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#progressive-web-app-pwa">PWA</a> •
+  <a href="#native-app">Native App</a> •
+  <a href="#custom-configurations">Custom Configurations</a> •
+  <a href="#es6">ES6</a> •
+  <a href="#useful-links">Useful Links</a> •
+  <a href="#multiplayer-game">Multiplayer Game</a> •
+  <a href="#examples">Examples</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
 
-<div align="center">
-  <sub>Examples made with ❤︎ by <a href="https://github.com/digitsensitive">digitsensitive</a></br>
-  Framework created by <a href="https://github.com/photonstorm">Photonstorm</a></sub>
-</div>
+<blockquote align="center">
+ Want to use ES6 instead of TypeScript? Check out the <a href="https://github.com/yandeu/phaser-project-template-es6#readme" >phaser-project-template-es6</a>
+</blockquote>
 
-# Phaser 3 and TypeScript
+---
 
-[Phaser](https://github.com/photonstorm/phaser) is a wonderful, fast and
-free open source HTML5 game framework.
-Here you will find everything you need to develop games with Phaser 3
-in TypeScript. Have fun discovering, developing and playing!
-Ideas and corrections are highly desirable to constantly
-improve this repository!
+## Key Features
 
-<div align="center">
-<a href="https://www.buymeacoffee.com/JZDVjsT26" target="blank">
-<img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" style="height: auto !important; width: auto !important;"></a>
-</div>
+- **ESNext** features ready (async/await, Rest/Spread operators)
+- Code Splitting
+- Obfuscation
+- Development Server with SourceMap and Live-Reload
+- PWA ready with offline support and "Add to Home screen" install prompt
+- Easy to build Native App using Capacitor
+- Includes Phaser 3 TypeScript typings
+- For development and production builds
+- Adds a webpack ContentHash to the JavaScript files (in production)
 
-## Getting started
+## Preview
 
-### Prerequisites
+This is what you get after installing this template. A simple and clean starter template written in TypeScript. [Try it!](https://s3.eu-central-1.amazonaws.com/phaser3-typescript/starter-template/index.html)
 
+<a href="https://s3.eu-central-1.amazonaws.com/phaser3-typescript/starter-template/index.html">
+<img src="readme/screenshot.png" width="640" style='border: 0.25em solid #e1e4e8;border-radius: 20px;'/>
+</a>
+
+## How To Use
+
+To clone and run this template, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone --depth 1 https://github.com/yandeu/phaser-project-template.git phaser3-game
+
+# Go into the repository
+$ cd phaser3-game
+
+# Install dependencies
+$ npm install
+
+# Start the local development server (on port 8080)
+$ npm start
+
+# Ready for production?
+# Build the production ready code to the /dist folder
+$ npm run build
 ```
-Download and install npm with Node.js @ https://nodejs.org/en
+
+Change the **gameName** in /webpack/webpack.common.js.
+
+All your game code lies inside the **/src/scripts** folder. All assets need to be inside the **/src/assets** folder in order to get copied to /dist while creating the production build. Do not change the name of the index.html and game.ts files.
+
+## Progressive Web App (PWA)
+
+![PWA](readme/pwa.png)
+
+This template is **100% PWA ready**.
+
+The ServiceWorker is **disabled by default**. Uncomment the line below inside /src/index.html to enable it.
+
+```html
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+    })
+  }
+</script>
 ```
 
-### Installing
+You can easily personalize its settings by following these steps:
 
-Select a folder, navigate to it, and clone this repository
-with this command-line:
+- Replace both icons in /pwa/icons with your own.
+  - One is **512x512** the other **192x192**
+- Add your own **favicon.ico** to /src
+- Adjust these parameters in the **manifest.json** file in /pwa
+  - **short_name**: Max. 12 characters
+  - **name**: The full game name
+  - **orientation**: "landscape" or "portrait"
+  - **background_color**: color of the splash screen
+  - **theme_color**: color of the navbar - has to match the theme-color in the index.html file
+- You can leave the **sw.js** (serviceWorker) in /pwa how it is.
+- Change the **gameName** in /webpack/webpack.common.js
 
+Read more about PWA on [developers.google.com](https://developers.google.com/web/progressive-web-apps/)
+
+## Native App
+
+The simplest way to build a Native App is using [Capacitor](https://capacitor.ionicframework.com/) and following its [Documentation](https://capacitor.ionicframework.com/docs/).
+The only thing you need to change after installing Capacitor is the **webDir** inside the **capacitor.config.json** file. Set it to **dist** like so:
+
+```json
+{
+  "appId": "com.example.app",
+  "appName": "YOUR_APP_NAME",
+  "bundledWebRuntime": false,
+  "webDir": "dist"
+}
 ```
-git clone https://github.com/digitsensitive/phaser3-typescript.git
-```
 
-Install the dependencies with this command-line:
+## Custom Configurations
 
-```
-npm install
-```
+### TypeScript Compiler
 
-### Building and Running
+Change the TypeScript compiler's settings in the tsconfig.json file.
 
-Perform a quick build (bundle.js) and start server:
+If you are new to TypeScript, you maybe want to set **"noImplicitAny"** to **false**.
 
-```
-npm run dev
-```
+You'll find more information about the TypeScript compiler [here](https://www.typescriptlang.org/docs/handbook/compiler-options.html).
 
-## Cheat Sheets
+### Typings
 
-- [Browse through the Cheat Sheets](https://github.com/digitsensitive/phaser3-typescript/blob/master/cheatsheets)
+The Phaser typings are in typings/**phaser.d.ts**. You can put your custom type definitions inside typings/**custom.d.ts**.
 
-## Tutorials
+### Webpack
 
-- [Learn to create a HTML5 Game in 5 Minutes](https://medium.com/@digit.sensitivee/learn-to-create-a-html5-game-in-5-minutes-604118f5d0ab)
+All webpack configs are in the **webpack** folder.
 
-## External Resources
+#### Obfuscation
 
-- [Phaser 3 Framework](https://github.com/photonstorm/phaser)
-- [Phaser 3 Docs with TypeScript Definition File](https://github.com/photonstorm/phaser3-docs)
-- [Phaser 3 Online Docs](https://photonstorm.github.io/phaser3-docs/index.html)
-- [Phaser 3 Official Examples](https://github.com/photonstorm/phaser3-examples)
-- [Phaser 3 Discourse](https://phaser.discourse.group)
+We are using the [webpack-obfuscator](https://github.com/javascript-obfuscator/webpack-obfuscator). Change its settings in webpack/webpack.prod.js if needed. All available options are listed [here](https://github.com/javascript-obfuscator/javascript-obfuscator#javascript-obfuscator-options).
 
-## Helpful tools
+## ES6
 
-- [Leshy SpriteSheet Tool](https://www.leshylabs.com/apps/sstool)
-- [Tiled](https://www.mapeditor.org)
-- [Littera](http://kvazars.com/littera)
-- [Tile Extruder](https://github.com/sporadic-labs/tile-extruder)
+Want to use ES6 instead of TypeScript? Switch to the [phaser-project-template-es6](https://github.com/yandeu/phaser-project-template-es6#readme)
 
-## TypeScript Configuration
+## Multiplayer Game
 
-### tsconfig.json
+Making a multiplayer game? Check out [geckos.io](https://github.com/geckosio/geckos.io#readme)
 
-The following `Compiler Options` have been set in the `tsconfig.json` file:
+## Useful Links
 
-| Option | Value     |
-| :------------- | :------------- |
-| target       | ES2016 |
-| module       | CommonJS |
-| sourceMap    | true |
-| noImplicitAny| true [WIP] |
-| strict       | true [WIP] |
+- [Phaser Website](https://phaser.io/)
+- [Phaser 3 Forum](https://phaser.discourse.group/)
+- [Phaser 3 API Docs](https://photonstorm.github.io/phaser3-docs/)
+- [Official Phaser 3 Examples](http://labs.phaser.io/)
+- [Notes of Phaser 3](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/index.html)
 
-You can see the complete list of the available options at [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
-Interesting read about [setting up a nodejs-project](https://codeburst.io/tips-for-setting-up-a-typescript-nodejs-project-5d1c48dc1a2d).
+## Examples
 
-## Changelog
+### Game Examples Built with this Starter Template
 
-[Learn about the latest improvements](https://github.com/digitsensitive/phaser3-typescript/blob/master/CHANGELOG.md)
+#### Platformer Example [[Play this game](https://s3.eu-central-1.amazonaws.com/phaser3-typescript/platformer-example/index.html) - [Visit its Repository](https://github.com/yandeu/phaser3-typescript-platformer-example#readme)]
 
-## Contributing
+[![phaser3-typescript-platformer](https://raw.githubusercontent.com/yandeu/phaser3-typescript-platformer-example/master/screenshots/nexus6-640x360.png)](https://github.com/yandeu/phaser3-typescript-platformer-example#readme)
 
-Want to correct a bug, contribute some code, or improve the codes? Excellent! Let me know!
-Please read [CONTRIBUTING.md](https://github.com/digitsensitive/phaser3-typescript/blob/master/CONTRIBUTING.md) for details on our code of conduct.
+#### Phaser 3 + Matter.js: Car Example [[Play this game](https://s3.eu-central-1.amazonaws.com/phaser3-typescript/car-on-curved-tarrain/index.html) - [Visit its Repository](https://github.com/yandeu/phaser3-matter-car-on-curved-terrain#readme)]
+
+<a href="https://github.com/yandeu/phaser3-matter-car-on-curved-terrain#readme">
+<img src="https://raw.githubusercontent.com/yandeu/phaser3-matter-car-on-curved-terrain/master/readme/myimage.gif" width="640" alt="phaser3-matter-car-example">
+</a>
+
+## Credits
+
+A huge thank you to Rich [@photonstorm](https://github.com/photonstorm) for creating Phaser
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/digitsensitive/phaser3-typescript/blob/master/LICENSE) file for details.
+The MIT License (MIT) 2019 - [Yannick Deubel](https://github.com/yandeu). Please have a look at the [LICENSE](LICENSE) for more details.

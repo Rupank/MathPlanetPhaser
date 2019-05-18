@@ -3,52 +3,52 @@
     "files": [{
         "type": "image",
         "key": "bg",
-        "url": "./src/mathplanet/assets/sprites/bg.png"
+        "url": "./src/assets/sprites/bg.png"
       },
       {
         "type": "image",
         "key": "starBottom",
-        "url": "./src/mathplanet/assets/sprites/starBottom.png"
+        "url": "./src/assets/sprites/starBottom.png"
       },
       {
         "type": "image",
         "key": "starTop",
-        "url": "./src/mathplanet/assets/sprites/starTop.png"
+        "url": "./src/assets/sprites/starTop.png"
       },
       {
         "type": "image",
         "key": "planet1",
-        "url": "./src/mathplanet/assets/sprites/planet1.png"
+        "url": "./src/assets/sprites/planet1.png"
       },
       {
         "type": "image",
         "key": "planet2",
-        "url": "./src/mathplanet/assets/sprites/planet2.png"
+        "url": "./src/assets/sprites/planet2.png"
       },
       {
         "type": "image",
         "key": "planet3",
-        "url": "./src/mathplanet/assets/sprites/planet3.png"
+        "url": "./src/assets/sprites/planet3.png"
       },
       {
         "type": "image",
         "key": "planet4",
-        "url": "./src/mathplanet/assets/sprites/planet4.png"
+        "url": "./src/assets/sprites/planet4.png"
       },
       {
         "type": "image",
         "key": "planet5",
-        "url": "./src/mathplanet/assets/sprites/planet5.png"
+        "url": "./src/assets/sprites/planet5.png"
       },
       {
         "type": "image",
         "key": "planet6",
-        "url": "./src/mathplanet/assets/sprites/planet6.png"
+        "url": "./src/assets/sprites/planet6.png"
       },
       {
         "type": "image",
         "key": "planet7",
-        "url": "./src/mathplanet/assets/sprites/planet7.png"
+        "url": "./src/assets/sprites/planet7.png"
       }
     ]
   }

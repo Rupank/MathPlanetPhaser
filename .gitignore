@@ -10,3 +10,5 @@ build
 node_modules
 *.tsx
 yarn.lock
+.cache
+.vscode
