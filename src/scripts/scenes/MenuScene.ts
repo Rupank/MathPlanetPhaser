@@ -10,6 +10,7 @@ export default class MenuScene extends Phaser.Scene {
     private totalThemes = 0;
     private isFullScreen: boolean;
     private bg: Background;
+    private bgSound;
     constructor() {
         super({
             key: "MenuScene"
@@ -49,6 +50,8 @@ export default class MenuScene extends Phaser.Scene {
     }
     addBg(): void {
         this.bg = new Background(this);
+        this.bgSound = this.sound.add("theme", { loop: true });
+        this.bgSound.play();
     }
 
 

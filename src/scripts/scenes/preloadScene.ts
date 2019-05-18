@@ -35,6 +35,10 @@ export default class PreloadScene extends Phaser.Scene {
     );
 
     this.load.pack("preload", "./assets/pack.json", "preload");
+    this.load.audio('theme', [
+      'assets/audio/platform.mp3'
+    ]);
+
 
   }
 
