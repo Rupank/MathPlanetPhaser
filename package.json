@@ -43,6 +43,6 @@
     "workbox-webpack-plugin": "^4.0.0"
   },
   "dependencies": {
-    "phaser": "^3.16.2"
+    "phaser": "^3.17.0"
   }
 }
