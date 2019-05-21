@@ -7,13 +7,8 @@
       },
       {
         "type": "image",
-        "key": "starBottom",
-        "url": "./assets/sprites/starBottom.png"
-      },
-      {
-        "type": "image",
-        "key": "starTop",
-        "url": "./assets/sprites/starTop.png"
+        "key": "starLayer",
+        "url": "./assets/sprites/starLayer.png"
       },
       {
         "type": "image",
